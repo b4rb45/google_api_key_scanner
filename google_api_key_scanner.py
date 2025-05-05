@@ -66,7 +66,19 @@ if __name__ == "__main__":
          "params": {"center": "Santiago", "zoom": "13", "size": "600x300", "maptype": "roadmap", "key": api_key}},
 
         {"name": "Elevation", "url": "https://maps.googleapis.com/maps/api/elevation/json",
-         "params": {"locations": "36.578581,-118.291994", "key": api_key}}
+         "params": {"locations": "36.578581,-118.291994", "key": api_key}},
+
+        {"name": "Street View", "url": "https://maps.googleapis.com/maps/api/streetview/metadata",
+         "params": {"location": "Santiago", "key": api_key}},
+
+        {"name": "Autocomplete", "url": "https://maps.googleapis.com/maps/api/place/autocomplete/json",
+         "params": {"input": "restaurante", "key": api_key}},
+
+        {"name": "Geolocation", "url": "https://www.googleapis.com/geolocation/v1/geolocate",
+         "params": {"key": api_key}},
+
+        {"name": "Roads", "url": "https://roads.googleapis.com/v1/snapToRoads",
+         "params": {"path": "60.170880,24.942795|60.170879,24.942796", "interpolate": "true", "key": api_key}}
     ]
 
     for service in services:
